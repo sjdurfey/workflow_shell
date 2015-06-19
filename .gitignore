@@ -1,3 +1,7 @@
+#Manually added stuff
+.idea/
+
+
 *.gem
 *.rbc
 /.config
