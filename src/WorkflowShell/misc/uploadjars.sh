@@ -15,7 +15,7 @@ function uploadjars {
     rm target/*orig*.jar || true
     scp *-console/target/*console*SNAPSHOT.jar "$USER@pophdevvm219:~/" || true
     scp target/*console*SNAPSHOT.jar "$USER@pophdevvm219:~/" || true
-    scp *-console/target/*console*SNAPSHOT.jar "$USER@pophdevutil30:~/" || true
-    scp target/*console*SNAPSHOT.jar "$USER@pophdevutil30:~/" || true
+  # scp *-console/target/*console*SNAPSHOT.jar "$USER@pophdevutil30:~/" || true
+  # scp target/*console*SNAPSHOT.jar "$USER@pophdevutil30:~/" || true
 
 }

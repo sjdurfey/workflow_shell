@@ -34,10 +34,12 @@ source "${SCRIPT_DIRECTORY}/git/gs.sh"
 source "${SCRIPT_DIRECTORY}/hadoop/hdl.sh"
 source "${SCRIPT_DIRECTORY}/hadoop/hgrep.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvncompile.sh"
+source "${SCRIPT_DIRECTORY}/mvn/mvndependency.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvngo.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvngolive.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvngolivequiet.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvngonotest.sh"
+source "${SCRIPT_DIRECTORY}/mvn/mvngonoits.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvnpomchange.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvnsite.sh"
 source "${SCRIPT_DIRECTORY}/mvn/mvntest.sh"
@@ -128,6 +130,9 @@ if [[ $# -lt 1 ]]
             "mvncompile" )
         	    mvncompile "$@"; 
                 exit 0;;
+            "mvndependency" )
+        	    mvndependency "$@";
+                exit 0;;
             "mvngo" )
         	    mvngo "$@"; 
                 exit 0;;
@@ -139,6 +144,9 @@ if [[ $# -lt 1 ]]
                 exit 0;;
             "mvngonotest" )
         	    mvngonotest "$@"; 
+                exit 0;;
+            "mvngonoits" )
+        	    mvngoskipits "$@";
                 exit 0;;
             "mvnpomchange" )
         	    mvnpomchange "$@"; 
